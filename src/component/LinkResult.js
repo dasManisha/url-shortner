@@ -41,10 +41,10 @@ const LinkResult = ({inputValue}) => {
     },[copied]);
 
     if(loading) {
-        return <p>Loading...</p>
+        return <NoData>Loading...</NoData>
     }
     if(error) {
-        return <p>Something when wrong :(</p>
+        return <NoData>Something when wrong :(</NoData>
     };
     return (
         <>
@@ -93,7 +93,9 @@ border: none;
 border-radius: 4px;
 background-color: orange;
 `
-
+const NoData = styled.p`
+color: white;
+font-size: 1rem;`
 
 
 
